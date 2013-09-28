@@ -1,0 +1,27 @@
+<html>
+<title> hello </title>
+<head>
+    <h1>this is a website about search test!</h1>
+</head>
+<body>
+    <p>{{results.first_name}}{{results.last_name}}</p>
+    <form action="." method="GET">
+        <p>用户注册</p>
+        <label for="first_name">姓氏</label>
+        <input type="text" name="first_name" value=""/>
+        <br/>
+        <label for="last_name">名字</label>
+        <input type="text" name="last_name" value=""/>
+        <br/>
+        <input type="" value="确定"/>
+        <input type="submit" value="重置"/>
+    </form>
+    {% if error %}
+        <p> {{ error }}不允许为空</p> 
+    {% endif %}
+    {% if results %}
+        <p> {{results.first_name}}{{results.last_name}}这个名字已经被注册，请更换一个！</p>
+    {% endif %}
+    <p>{{first_name}}{{last_name}}注册成功!</p>
+</body>
+</html>
