@@ -2,12 +2,41 @@
 <html>
 <title> hello </title>
 <head>
-    <h1>this is a website about search test!</h1>
+    <h1 style="text-align:center;
+               font-family:hei serif;
+               font-style:italic;
+               font-variant:small-caps;
+               font-weight:bold;
+               font-size:2em;
+               text-shadow:0px -1px 0px #000000,
+                           0px 1px 3px #606060;
+               color:#606060;
+               ">
+               this is a website about search test!</h1>
 </head>
 <body style="background-color:transparent; background-position:center">
     <p>{{results.first_name}}{{results.last_name}}</p>
     <form action="." method="GET">
-        <p style="text-align:center; background-color:rgba(0,255,0,0.5); color:red; text-indent:2em; word-spacing:10px; letter-spacing:10px; text-decoration:underline overline line-throuth; direction:rtl">用户注册</p>
+        <p style="text-align:center;
+                  letter-spacing:10px;
+                  font-family:hei serif;
+                  font-style:italic;
+                  font-variant:small-caps;
+                  font-weight:bold;
+                  font-size:2em;
+                  text-shadow:3px 5px 5px rgba(0,255,0,0.5);
+                  outline-color:red;
+                  outline-style:dotted;
+                  outline-width:2px;
+                  ">
+                  欢迎光临本网站！</p>
+        <p style="text-align:center; 
+                  background-color:rgba(0,255,0,0.5);
+                  color:red; text-indent:2em; 
+                  word-spacing:10px; 
+                  letter-spacing:10px; 
+                  text-decoration:underline overline line-through; 
+                  direction:rtl;">用户注册</p>
         <label for="first_name">姓氏</label>
         <input type="text" name="first_name" value=""/>
         <br/>
