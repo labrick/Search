@@ -54,5 +54,34 @@
     {% else %}
         <p>{{first_name}}{{last_name}}注册成功!</p>
     {% endif %}
+    <ul>
+        <li>语文</li>
+        <li>数学</li>
+        <li>物理</li>
+        <li>化学</li>
+    </ul>
+    <table style="border:1px solid blue;
+                  border-collapse:collapse;
+                  caption-side:bottom;
+                  table-layout:fixed;">
+    <caption>成绩</caption>
+    <tr>
+        <th style="border:1px solid blue;
+                   width:50px;
+                   height:100px;
+                   vertical-align:top;
+                   text-align:right;
+                   padding:10px;
+                   ">语文</th>
+        <th style="border:1px solid blue;">数学</th>
+        <th>物理</th>
+        <th>化学</th>
+    </tr>
+    <tr>
+        <td>89</td>
+        <td>92</td>
+        <td>73</td>
+        <td>96</td>
+    </table>
 </body>
 </html>
