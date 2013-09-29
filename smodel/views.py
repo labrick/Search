@@ -10,7 +10,7 @@ def index(request):
 
     if first_name and last_name:
         qset = (
-            Q(first_name__icontains=first_name) | 
+            Q(first_name__icontains=first_name) & 
             Q(last_name__icontains=last_name)
         )
         results = Person.objects.filter(qset).distinct()
