@@ -2,7 +2,7 @@
 <html>
 <title> hello </title>
 <head>
-    <h1 style="text-align:center;
+    <h1 style="position:relative; left:-20px; bottom:-20px;
                font-family:hei serif;
                font-style:italic;
                font-variant:small-caps;
@@ -13,10 +13,34 @@
                color:#606060;
                ">
                this is a website about search test!</h1>
+    <style>
+        th,td {
+                border:1px solid blue;
+                border:1px solid blue;
+                width:50px;
+                height:100px;
+                vertical-align:top;
+                text-align:right;
+                padding:10 20 30 40;
+            }
+        *.warning   { color:red }
+        *#hello     { color:blue }
+        *[title]    { color:green }
+        p > em    { background-color:yellow}
+        a:visited { color:gray }
+        a:link    { color:blue }
+        a:hover   { color:yellow }
+        a:active  { color:red }
+    </style>
 </head>
 <body style="background-color:transparent; background-position:center">
     <p>{{results.first_name}}{{results.last_name}}</p>
     <form action="." method="GET">
+    <div>
+        <a href="https://www.google.com">google官网</a>
+        <p title="hello" style="position:absolution; left:20px;">
+                hello,<em>this is a</em> text!
+        </p>
         <p style="text-align:center;
                   letter-spacing:10px;
                   font-family:hei serif;
@@ -30,6 +54,7 @@
                   outline-width:2px;
                   ">
                   欢迎光临本网站！</p>
+    </div>
         <p style="text-align:center; 
                   background-color:rgba(0,255,0,0.5);
                   color:red; text-indent:2em; 
@@ -47,12 +72,12 @@
         <input type="submit" value="重置"/>
     </form>
     {% if error %}
-        <p> {{ error }}不允许为空</p> 
+        <p class="warning"> {{ error }}不允许为空</p> 
     {% endif %}
     {% if results %}
         <p> {{results.first_name}}{{results.last_name}}这个名字已经被注册，请更换一个！</p>
     {% else %}
-        <p>{{first_name}}{{last_name}}注册成功!</p>
+        <p id="hello">{{first_name}}{{last_name}}注册成功!</p>
     {% endif %}
     <ul>
         <li>语文</li>
@@ -66,14 +91,8 @@
                   table-layout:fixed;">
     <caption>成绩</caption>
     <tr>
-        <th style="border:1px solid blue;
-                   width:50px;
-                   height:100px;
-                   vertical-align:top;
-                   text-align:right;
-                   padding:10px;
-                   ">语文</th>
-        <th style="border:1px solid blue;">数学</th>
+        <th>语文</th>
+        <th>数学</th>
         <th>物理</th>
         <th>化学</th>
     </tr>
